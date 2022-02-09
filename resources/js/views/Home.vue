@@ -27,6 +27,9 @@
                         
                         <b-form-group id="input-group-3" label="Nomor Induk" label-for="input-nomor-induk">
                             <b-form-input
+                                maxlength="12" 
+                                onKeyDown="if(this.value.length==12)return false;"
+                                type="number"
                                 id="input-nomor-induk"
                                 v-model="form.nik"
                                 placeholder="xxxxxxxxxxxx"
@@ -36,6 +39,7 @@
                         
                         <b-form-group id="input-group-4" label="Tanggal Lahir" label-for="input-tgl-lahir">
                             <b-form-input
+                                type="date"
                                 id="input-tgl-lahir"
                                 v-model="form.ttl"
                                 placeholder="xxxx - xx - xx"
@@ -43,9 +47,9 @@
                             />
                         </b-form-group>
                         
-                        <b-form-group id="input-group-4" label="Alamat Rumah" label-for="input-tgl-lahir">
+                        <b-form-group id="input-group-5" label="Alamat Rumah" label-for="input-alamat">
                             <b-form-textarea
-                                id="input-tgl-lahir"
+                                id="input-alamat"
                                 v-model="form.address"
                                 placeholder="Alamat rumah"
                                 rows="3"

@@ -2181,6 +2181,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -49653,6 +49657,9 @@ var render = function () {
                   [
                     _c("b-form-input", {
                       attrs: {
+                        maxlength: "12",
+                        onKeyDown: "if(this.value.length==12)return false;",
+                        type: "number",
                         id: "input-nomor-induk",
                         placeholder: "xxxxxxxxxxxx",
                         required: "",
@@ -49681,6 +49688,7 @@ var render = function () {
                   [
                     _c("b-form-input", {
                       attrs: {
+                        type: "date",
                         id: "input-tgl-lahir",
                         placeholder: "xxxx - xx - xx",
                         required: "",
@@ -49701,15 +49709,15 @@ var render = function () {
                   "b-form-group",
                   {
                     attrs: {
-                      id: "input-group-4",
+                      id: "input-group-5",
                       label: "Alamat Rumah",
-                      "label-for": "input-tgl-lahir",
+                      "label-for": "input-alamat",
                     },
                   },
                   [
                     _c("b-form-textarea", {
                       attrs: {
-                        id: "input-tgl-lahir",
+                        id: "input-alamat",
                         placeholder: "Alamat rumah",
                         rows: "3",
                         "max-rows": "6",
